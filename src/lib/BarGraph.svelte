@@ -25,7 +25,7 @@
 
 <style>
   .bar rect {
-    animation: grow 1s forwards;
+    animation: grow 0.5s forwards;
   }
 
   .bar text {
