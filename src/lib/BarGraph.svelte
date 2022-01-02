@@ -1,10 +1,11 @@
 <script lang="ts">
-  import { onMount } from "svelte";
-  const height = 200;
-  const width = 500;
+  import { palette } from "../assets/ColorPalette";
+
   const barHeight = 20;
   const barOffset = 3;
 
+  export let height = 200;
+  export let width = 500;
   export let barData: { label: string; value: number }[];
 </script>
 
@@ -16,6 +17,7 @@
         width={`${val.value}%`}
         height={barHeight}
         y={i * 20 + i * barOffset}
+        fill={palette[i - Math.floor(i / palette.length) * palette.length]}
       />
     </g>
   {/each}
